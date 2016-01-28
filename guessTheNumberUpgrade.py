@@ -1,4 +1,4 @@
-# replace the contents of this comment with your name
+Richard Tran
 import random
 
 # -------------------------------------------------------------------
@@ -6,7 +6,8 @@ import random
 # it has one parameter:
 #   'topLimit' which is the top limit for the random number generator
 # the function returns the random number generated to its caller
-def generateNumber( topLimit ):
+def generateNumber(topLimit ):
+    return randomNumber(1,toplimit)
     
     # TO DO: ####################################################
     # Write code in this function that calculates and           #
@@ -25,7 +26,7 @@ def generateNumber( topLimit ):
 #   return True if the user guessed the answer correctly
 #   return False if the user did not guess the answer correctly
 def askUserToGuess( times, secretNumber ):
-
+        
     # this loop cycles through all the user guesses
     for guessesTaken in range(1, times+1):
         print('Take your guess #' + str(guessesTaken) + ': ')
@@ -44,6 +45,14 @@ def askUserToGuess( times, secretNumber ):
 #   the 'userGuess' parameter is the answer entered by the user
 #   the 'userSecretNumber' parameter is the randomly generated number
 def evaluateAnswer( userGuess, userSecretNumber ):
+    if userGuess < SecretNumber:
+        print('Your guess is too low')
+        return False
+    elif userGuess > SecretNumber:
+        print('You guess is too high')
+        return False
+    elif userGuess == SecretNumber:
+        return True
     
     # TO DO: ####################################################
     # Write code in this function that compares userGuess and   #
@@ -66,6 +75,14 @@ def evaluateAnswer( userGuess, userSecretNumber ):
 #       True, we'll show the right answer on the screen
 #       False, we won't show the right answer on the screen
 def playGame( showAnswer ):
+    print('Hello!')
+    print('Choose the upper limit of the random number generator.')
+    topLimit = int(input())
+    print('Choose a total number of guesses.')
+    totalGuesses = int(input())
+    theNumber = generateNumber( response )
+    print('Pick a number between 1 and ' str(response) + ':')
+    print('You have ' + str(totalGuesses) + 'guesses')
     
     # TO DO: ####################################################
     # Write code in this function that                          #
