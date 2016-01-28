@@ -6,7 +6,7 @@ import random
 # it has one parameter:
 #   'topLimit' which is the top limit for the random number generator
 # the function returns the random number generated to its caller
-def generateNumber(topLimit ):
+def generateNumber( topLimit ):
     return randomNumber(1,toplimit)
     
     # TO DO: ####################################################
