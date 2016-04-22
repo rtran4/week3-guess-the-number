@@ -81,7 +81,7 @@ def playGame( showAnswer ):
     print('Choose a total number of guesses.')
     totalGuesses = int(input())
     theNumber = generateNumber( response )
-    print('Pick a number between 1 and ' str(response) + ':')
+    print('Pick a number between 1 and ' + str(response) + ':')
     print('You have ' + str(totalGuesses) + 'guesses')
     
     # TO DO: ####################################################
